@@ -13,11 +13,11 @@ import { LinkPreset } from "./types/config";
 import { getTranslateLanguageFromConfig } from "./utils/language-utils";
 
 // Define site language
-const SITE_LANG = "en"; // Language code, e.g., 'en', 'zh_CN', 'ja', etc.
+const SITE_LANG = "zh_CN"; // Language code, e.g., 'en', 'zh_CN', 'ja', etc.
 
 export const siteConfig: SiteConfig = {
-	title: "Mizuki",
-	subtitle: "One demo website",
+	title: "喵洛阁",
+	subtitle: "克喵的博客",
 
 	lang: SITE_LANG,
 
@@ -40,22 +40,22 @@ export const siteConfig: SiteConfig = {
 		// Support single image or image array, carousel is automatically enabled when array length > 1
 		src: {
 			desktop: [
-				"assets/desktop-banner/1.webp",
-				"assets/desktop-banner/2.webp",
-				"assets/desktop-banner/3.webp",
-				"assets/desktop-banner/4.webp",
-				"assets/desktop-banner/5.webp",
-				"assets/desktop-banner/6.webp",
-				"assets/desktop-banner/7.webp",
+				"https://img.314926.xyz/images/2025/08/15/cover22.webp",
+				"https://img.314926.xyz/images/2025/07/30/jihuangcover.webp",
+				"https://img.314926.xyz/images/2025/07/30/cover10.webp",
+				"https://img.314926.xyz/images/2025/08/08/cover16.webp",
+				"https://img.314926.xyz/images/2025/08/15/cover21.webp",
+				"https://img.314926.xyz/images/2025/08/15/cover20.webp",
+				"https://img.314926.xyz/images/2025/08/15/cover19.webp",
 			], // Desktop banner images
 			mobile: [
-				"assets/mobile-banner/1.webp",
-				"assets/mobile-banner/2.webp",
-				"assets/mobile-banner/3.webp",
-				"assets/mobile-banner/4.webp",
-				"assets/mobile-banner/5.webp",
-				"assets/mobile-banner/6.webp",
-				"assets/mobile-banner/7.webp",
+				"https://img.314926.xyz/images/2025/08/15/cover22.webp",
+				"https://img.314926.xyz/images/2025/07/30/jihuangcover.webp",
+				"https://img.314926.xyz/images/2025/07/30/cover10.webp",
+				"https://img.314926.xyz/images/2025/08/08/cover16.webp",
+				"https://img.314926.xyz/images/2025/08/15/cover21.webp",
+				"https://img.314926.xyz/images/2025/08/15/cover20.webp",
+				"https://img.314926.xyz/images/2025/08/15/cover19.webp",
 			], // Mobile banner images
 		}, // Use local banner images
 
@@ -69,13 +69,13 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // Display custom text on homepage
-			title: "Mizuki", // Homepage banner main title
+			title: "喵洛阁", // Homepage banner main title
 
 			subtitle: [
-				"One demo website",
-				"Carousel Text1",
-				"Carousel Text2",
-				"Carousel Text3",
+				"愿你看轻一切真相后，依旧热爱你的家人和朋友。",
+				"奇迹只能一时，命运总是漫长。",
+				"总有些事情高于其他！",
+				"光就是一切的意义！",
 			], // Homepage banner subtitle, supports multiple texts
 			typewriter: {
 				enable: true, // Enable subtitle typewriter effect
@@ -99,11 +99,11 @@ export const siteConfig: SiteConfig = {
 	},
 	favicon: [
 		// Leave empty to use default favicon
-		// {
-		//   src: '/favicon/icon.png',    // Icon file path
-		//   theme: 'light',              // Optional, specify theme 'light' | 'dark'
-		//   sizes: '32x32',              // Optional, icon size
-		// }
+		{
+		  src: 'https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp',    // Icon file path
+		  theme: 'light',              // Optional, specify theme 'light' | 'dark'
+		  sizes: '32x32',              // Optional, icon size
+		}
 	],
 };
 
@@ -118,7 +118,7 @@ export const navBarConfig: NavBarConfig = {
 			children: [
 				{
 					name: "GitHub",
-					url: "https://github.com/matsuzaka-yuki/Mizuki",
+					url: "https://github.com/kemiaofxjun",
 					external: true,
 				},
 				{
@@ -147,9 +147,9 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.jpg", // Relative to /src directory. If starts with '/', relative to /public directory
-	name: "Mizuki",
-	bio: "This is a description",
+	avatar: "https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp", // Relative to /src directory. If starts with '/', relative to /public directory
+	name: "克喵爱吃卤面",
+	bio: "我们不仅是守护者，还是一群时刻对抗着失控和疯狂的可怜虫~",
 	links: [
 		{
 			name: "Bilibli",
@@ -189,8 +189,8 @@ export const commentConfig: CommentConfig = {
 };
 
 export const announcementConfig: AnnouncementConfig = {
-	title: "Announcement", // Announcement title
-	content: "Welcome to my blog! This is a sample announcement.", // Announcement content
+	title: "公告", // Announcement title
+	content: "欢迎来到克喵的博客！遇到什么问题优先CTRL+F5刷新一下！", // Announcement content
 	closable: true, // Allow users to close the announcement
 	link: {
 		enable: true, // Enable link
