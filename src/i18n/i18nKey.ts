@@ -88,6 +88,9 @@ enum I18nKey {
 	galleryNoGroups = 'galleryNoGroups',
 	galleryNoImages = 'galleryNoImages',
 	galleryCreateFirst = 'galleryCreateFirst',
+galleryTotalGroups = "galleryTotalGroups",
+galleryTotalImages = "galleryTotalImages",
+galleryRecentActivity = "galleryRecentActivity",
 }
 
 export default I18nKey;

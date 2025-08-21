@@ -1,54 +1,52 @@
-# About This Site
+# About 👋 克喵爱吃卤面/Ke Miao
 
-This website is built with the **Astro** framework using the [Mizuki](https://github.com/matsuzaka-yuki/mizuki) theme.
+<div style="text-align: center; margin: 20px 0;">
+  <a href="https://kemeow.kemiaosw.top/">
+    <img 
+      src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" 
+      alt="GIF Link" 
+      height="275" 
+      style="max-width: 100%; height: auto; display: inline-block;"
+    />
+  </a>
+</div>
 
-::github{repo="matsuzaka-yuki/Mizuki"}
+我是克喵爱吃卤面，这个名字来源于我喜欢的小说《诡秘之主》和二代两个主角的外号的合体。
 
-## 🌟 Theme Features
+> 是一个普通人、大学牲，在这个博客分享我的生活记录、资源分享和踩坑教程，希望能帮助我和大家。
 
-### 🎨 Design & User Experience
-- **Modern & Elegant Design** - Clean, minimalist interface with beautiful typography
-- **Fully Responsive** - Optimized for all devices from mobile to desktop
-- **Dark/Light Mode** - Automatic theme switching with smooth transitions
-- **Beautiful Typography** - Enhanced readability with JetBrains Mono font
-- **Smooth Animations** - Fluid page transitions and interactive elements
+我的资源来自网络，本人不涉及破解等领域，如果我的分享侵犯了您的权益，请[联系我](me@mail.kemeow.top)删除。
 
-### 🔍 Content & Search
-- **Advanced Search** - Powered by [Pagefind](https://pagefind.app/) for fast, accurate results
-- **Enhanced Markdown** - Extended syntax with code highlighting and math support
-- **Interactive Table of Contents** - Auto-scroll navigation for long articles
-- **RSS Feed Generation** - Stay updated with automatic feed generation
-- **Reading Time Estimation** - Know how long articles take to read
-- **Post Categorization** - Organize content with tags and categories
+我的博客**不定时更新**，资源相对来说不会固定找，一般来说都是我需要什么就找什么，因为我不用**IOS*，想找的话只能邮箱找我，或者在Github我的主页的issue留言，我会尽快回复并寻找(不一定能找到)。
 
-### 🌐 Internationalization
-- **Multi-language Support** - Real-time translation capabilities
-- **Auto Language Detection** - Detects user preferences automatically
-- **Client-side Translation** - Powered by Edge Translate technology
-- **10+ Languages Supported** - EN, ZH-CN, ZH-TW, JA, KO, ES, TH, VI, ID, TR
+## 资源分享项目
 
-### 📱 Special Pages
-- **Anime Tracking Page** - Track your anime watching progress with ratings
-- **Friends Links Page** - Showcase friend websites with beautiful cards
-- **Diary/Moments Page** - Share life moments like social media posts
-- **Archive Page** - Organized timeline view of all posts
-- **About Page** - Customizable personal introduction (this page!)
+::github{repo="Kemeow815/kemiaofx"}
 
-### 🛠 Technical Features
-- **Enhanced Code Blocks** - Powered by [Expressive Code](https://expressive-code.com/)
-- **Math Support** - LaTeX rendering with KaTeX for mathematical expressions
-- **Image Optimization** - PhotoSwipe gallery with lazy loading
-- **SEO Optimized** - Built-in sitemap and meta tags for better search visibility
-- **Performance Optimized** - Fast loading with caching and optimization
-- **Comment System Ready** - Integration support for Twikoo comments
+- TG频道: [克喵分享](https://t.me/kemiaofx_me)
 
-### 🎯 Advanced Markdown Features
-- **Callouts & Admonitions** - Beautiful info boxes with `> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`
-- **Mathematical Equations** - Write LaTeX math with `$inline$` and `$$block$$` syntax
-- **GitHub Cards** - Embed repository cards with `::github{repo="user/repo"}`
-- **Syntax Highlighting** - Advanced code highlighting with line numbers
-- **Copy Code Buttons** - Easy code copying functionality
+## GITHuB 数据
 
----
+<div align="center">
+  <img src="https://readme.kemeow.top/api/?username=kemiaofxjun&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" alt="GitHub Stats" />
+</div>
 
-*Built with ❤️ using Astro and inspired by modern web design principles.*
+<p align="center">
+  <a>
+    <img src="https://activity.kemeow.top/graph?username=kemiaofxjun&custom_title=克喵的热力图&hide_border=true" alt="Activity">
+  </a>
+</p>
+
+<div align="center">
+  <img 
+    src="https://github-immortality.vercel.app/api?username=kemiaofxjun&theme=github-compact&custom_title=Immortality&radius=30&height=300" 
+    alt="修仙系列统计卡片" 
+    style="max-width: 100%; height: auto;" 
+  />
+</div>
+
+
+## 赞助
+
+- 微信公众号：[克喵的小站](https://wechat.kemeow.top/)
+- 赞助页面: [点我](https://donate.kemeow.top/)

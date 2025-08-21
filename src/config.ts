@@ -113,7 +113,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
-			name: "Links",
+			name: "链接",
 			url: "/links/",
 			children: [
 				{
@@ -123,18 +123,18 @@ export const navBarConfig: NavBarConfig = {
 				},
 				{
 					name: "Bilibili",
-					url: "https://space.bilibili.com/701864046",
+					url: "https://space.bilibili.com/3546643173477234",
 					external: true,
 				},
 				{
-					name: "Gitee",
-					url: "https://gitee.com/matsuzakayuki/Mizuki",
+					name: "Telegram",
+					url: "https://t.me/kemiaosw",
 					external: true,
 				},
 			],
 		},
 		{
-			name: "My",
+			name: "页面",
 			url: "/content/",
 			children: [LinkPreset.Anime, LinkPreset.Diary, LinkPreset.Gallery],
 		},
@@ -147,24 +147,30 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp", // Relative to /src directory. If starts with '/', relative to /public directory
+	avatar:
+		"https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp", // Relative to /src directory. If starts with '/', relative to /public directory
 	name: "克喵爱吃卤面",
 	bio: "我们不仅是守护者，还是一群时刻对抗着失控和疯狂的可怜虫~",
 	links: [
 		{
-			name: "Bilibli",
-			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
-		},
-		{
-			name: "Gitee",
-			icon: "mdi:git",
-			url: "https://gitee.com/matsuzakayuki",
+			name: "Telegram",
+			icon: "mdi:telegram",
+			url: "https://t.me/kemiaosw",
 		},
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
-			url: "https://github.com/matsuzaka-yuki",
+			url: "https://github.com/kemiaofxjun",
+		},
+		{
+			name: "Mail",
+			icon: "mdi:email",
+			url: "mailto:me@mail.kemeow.top",
+		},
+		{
+			name: "QQ",
+			icon: "fa6-brands:qq",
+			url: "https://qm.qq.com/q/EXHibIT2GA",
 		},
 	],
 	// Umami统计部份，记得在layout插入Umami的head标签
@@ -188,9 +194,9 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 };
 
 export const commentConfig: CommentConfig = {
-	enable: false, // Enable the comment function. When it is set to false, the comment component will not be displayed in the article area.
+	enable: true, // Enable the comment function. When it is set to false, the comment component will not be displayed in the article area.
 	twikoo: {
-		envId: "https://twikoo.vercel.app",
+		envId: "https://kemiao-twikoo.050815.xyz",
 	},
 };
 
@@ -316,7 +322,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 		//hidden:不显示侧边栏 sidebar:显示侧边栏
 		layout: {
 			// 移动端：抽屉模式
-			mobile: "sidebar",
+			mobile: "drawer",
 			// 平板端：显示侧边栏
 			tablet: "sidebar",
 			// 桌面端：显示侧边栏
