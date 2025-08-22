@@ -94,7 +94,7 @@ export const zh_CN: Translation = {
 
 	// 项目展示页面
 	[Key.projects]: "项目展示",
-	[Key.projectsSubtitle]: "我的开发项目作品集",
+	[Key.projectsSubtitle]: "我的项目作品集",
 	[Key.projectsAll]: "全部",
 	[Key.projectsWeb]: "网页应用",
 	[Key.projectsMobile]: "移动应用",
@@ -148,6 +148,7 @@ export const zh_CN: Translation = {
 	[Key.timeline]: "时间线",
 	[Key.timelineSubtitle]: "我的成长历程和重要里程碑",
 	[Key.timelineEducation]: "教育经历",
+	[Key.timelineDiary]: "生活日常",
 	[Key.timelineWork]: "工作经历",
 	[Key.timelineProject]: "项目经历",
 	[Key.timelineAchievement]: "成就荣誉",
