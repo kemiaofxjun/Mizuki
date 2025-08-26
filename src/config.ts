@@ -3,6 +3,7 @@ import type {
 	CommentConfig,
 	ExpressiveCodeConfig,
 	FooterConfig,
+	FullscreenWallpaperConfig,
 	LicenseConfig,
 	MusicPlayerConfig,
 	NavBarConfig,
@@ -39,7 +40,7 @@ export const siteConfig: SiteConfig = {
 		ignoreTags: ["script", "style", "code", "pre"], // 翻译时忽略的 HTML 标签
 	},
 	banner: {
-		enable: true, // 暂时禁用横幅以提高加载速度
+		enable: false, // 暂时禁用横幅以提高加载速度
 
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
@@ -113,6 +114,29 @@ export const siteConfig: SiteConfig = {
 		//   sizes: '32x32',              // 可选，图标大小
 		// }
 	],
+};
+export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
+	enable: true, // 启用全屏壁纸功能,非Banner模式下生效
+	src: {
+		desktop: [
+			"/assets/desktop-banner/1.webp",
+			"/assets/desktop-banner/2.webp",
+			"/assets/desktop-banner/3.webp",
+		], // 桌面端壁纸图片
+		mobile: [
+			"/assets/mobile-banner/1.webp",
+			"/assets/mobile-banner/2.webp",
+			"/assets/mobile-banner/3.webp",
+		], // 移动端壁纸图片
+	},
+	position: "center", // 壁纸位置，等同于 object-position
+	carousel: {
+		enable: true, // 启用轮播
+		interval: 5, // 轮播间隔时间（秒）
+	},
+	zIndex: -1, // 层级，确保壁纸在背景层
+	opacity: 0.8, // 壁纸透明度
+	blur: 1, // 背景模糊程度
 };
 
 export const navBarConfig: NavBarConfig = {
@@ -394,6 +418,7 @@ export const sakuraConfig: SakuraConfig = {
 	},
 	zIndex: 100, // 层级，确保樱花在合适的层级显示
 };
+
 // 导出所有配置的统一接口
 export const widgetConfigs = {
 	profile: profileConfig,
@@ -401,4 +426,5 @@ export const widgetConfigs = {
 	music: musicPlayerConfig,
 	layout: sidebarLayoutConfig,
 	sakura: sakuraConfig,
+	fullscreenWallpaper: fullscreenWallpaperConfig,
 } as const;
