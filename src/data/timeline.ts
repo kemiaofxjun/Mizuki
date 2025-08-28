@@ -16,7 +16,7 @@ export interface TimelineItem {
 	links?: {
 		name: string;
 		url: string;
-		type: 'website' | 'certificate' | 'project' | 'other';
+		type: "website" | "certificate" | "project" | "other";
 	}[];
 	icon?: string; // Iconify icon name
 	color?: string;
@@ -236,10 +236,11 @@ export const timelineData: TimelineItem[] = [
 export const getTimelineStats = () => {
 	const total = timelineData.length;
 	const byType = {
-		education: timelineData.filter(item => item.type === 'education').length,
-		work: timelineData.filter(item => item.type === 'work').length,
-		project: timelineData.filter(item => item.type === 'project').length,
-		achievement: timelineData.filter(item => item.type === 'achievement').length
+		education: timelineData.filter((item) => item.type === "education").length,
+		work: timelineData.filter((item) => item.type === "work").length,
+		project: timelineData.filter((item) => item.type === "project").length,
+		achievement: timelineData.filter((item) => item.type === "achievement")
+			.length,
 	};
 
 	return { total, byType };
@@ -247,32 +248,41 @@ export const getTimelineStats = () => {
 
 // 按类型获取时间线项目
 export const getTimelineByType = (type?: string) => {
-	if (!type || type === 'all') {
-		return timelineData.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
+	if (!type || type === "all") {
+		return timelineData.sort(
+			(a, b) =>
+				new Date(b.startDate).getTime() - new Date(a.startDate).getTime(),
+		);
 	}
 	return timelineData
-		.filter(item => item.type === type)
-		.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
+		.filter((item) => item.type === type)
+		.sort(
+			(a, b) =>
+				new Date(b.startDate).getTime() - new Date(a.startDate).getTime(),
+		);
 };
 
 // 获取特色时间线项目
 export const getFeaturedTimeline = () => {
 	return timelineData
-		.filter(item => item.featured)
-		.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
+		.filter((item) => item.featured)
+		.sort(
+			(a, b) =>
+				new Date(b.startDate).getTime() - new Date(a.startDate).getTime(),
+		);
 };
 
 // 获取当前进行中的项目
 export const getCurrentItems = () => {
-	return timelineData.filter(item => !item.endDate);
+	return timelineData.filter((item) => !item.endDate);
 };
 
 // 计算总工作经验
 export const getTotalWorkExperience = () => {
-	const workItems = timelineData.filter(item => item.type === 'work');
+	const workItems = timelineData.filter((item) => item.type === "work");
 	let totalMonths = 0;
 
-	workItems.forEach(item => {
+	workItems.forEach((item) => {
 		const startDate = new Date(item.startDate);
 		const endDate = item.endDate ? new Date(item.endDate) : new Date();
 		const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
@@ -282,6 +292,6 @@ export const getTotalWorkExperience = () => {
 
 	return {
 		years: Math.floor(totalMonths / 12),
-		months: totalMonths % 12
+		months: totalMonths % 12,
 	};
 };

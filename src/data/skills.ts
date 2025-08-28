@@ -6,8 +6,8 @@ export interface Skill {
 	name: string;
 	description: string;
 	icon: string; // Iconify icon name
-	category: 'frontend' | 'backend' | 'database' | 'tools' | 'other';
-	level: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+	category: "frontend" | "backend" | "database" | "tools" | "other";
+	level: "beginner" | "intermediate" | "advanced" | "expert";
 	experience: {
 		years: number;
 		months: number;
@@ -53,15 +53,81 @@ export const skillsData: Skill[] = [
 	// 	color: '#61DAFB'
 	// },
 	{
+		id: "javascript",
+		name: "JavaScript",
+		description: "现代JavaScript开发，包括ES6+语法、异步编程、模块化开发等。",
+		icon: "logos:javascript",
+		category: "frontend",
+		level: "advanced",
+		experience: { years: 3, months: 6 },
+		projects: ["mizuki-blog", "portfolio-website", "data-visualization-tool"],
+		color: "#F7DF1E",
+	},
+	{
+		id: "typescript",
+		name: "TypeScript",
+		description: "类型安全的JavaScript超集，提升代码质量和开发效率。",
+		icon: "logos:typescript-icon",
+		category: "frontend",
+		level: "advanced",
+		experience: { years: 2, months: 8 },
+		projects: ["mizuki-blog", "portfolio-website", "task-manager-app"],
+		color: "#3178C6",
+	},
+	{
+		id: "react",
+		name: "React",
+		description: "构建用户界面的JavaScript库，包括Hooks、Context、状态管理等。",
+		icon: "logos:react",
+		category: "frontend",
+		level: "advanced",
+		experience: { years: 2, months: 10 },
+		projects: ["portfolio-website", "task-manager-app"],
+		color: "#61DAFB",
+	},
+	{
 		id: "vue",
 		name: "Vue.js",
 		description: "渐进式JavaScript框架，易学易用，适合快速开发。",
 		icon: "logos:vue",
 		category: "frontend",
-		level: "beginner",
-		experience: { years: 0, months: 8 },
+		level: "intermediate",
+		experience: { years: 1, months: 8 },
 		projects: ["data-visualization-tool"],
 		color: "#4FC08D",
+	},
+	{
+		id: "angular",
+		name: "Angular",
+		description: "Google开发的企业级前端框架，功能完整的单页应用解决方案。",
+		icon: "logos:angular-icon",
+		category: "frontend",
+		level: "beginner",
+		experience: { years: 0, months: 9 },
+		projects: ["enterprise-dashboard"],
+		color: "#DD0031",
+	},
+	{
+		id: "nextjs",
+		name: "Next.js",
+		description: "React的生产级框架，支持SSR、SSG和全栈开发。",
+		icon: "logos:nextjs-icon",
+		category: "frontend",
+		level: "intermediate",
+		experience: { years: 1, months: 4 },
+		projects: ["e-commerce-frontend", "blog-platform"],
+		color: "#000000",
+	},
+	{
+		id: "nuxtjs",
+		name: "Nuxt.js",
+		description: "Vue.js的直观框架，支持服务端渲染和静态站点生成。",
+		icon: "logos:nuxt-icon",
+		category: "frontend",
+		level: "beginner",
+		experience: { years: 0, months: 6 },
+		projects: ["vue-ssr-app"],
+		color: "#00DC82",
 	},
 	{
 		id: "astro",
@@ -69,10 +135,54 @@ export const skillsData: Skill[] = [
 		description: "现代静态站点生成器，支持多框架集成和优秀的性能。",
 		icon: "logos:astro-icon",
 		category: "frontend",
-		level: "beginner",
-		experience: { years: 0, months: 6 },
-		// projects: ['mizuki-blog'],
+		level: "advanced",
+		experience: { years: 1, months: 2 },
+		projects: ["mizuki-blog"],
 		color: "#FF5D01",
+	},
+	{
+		id: "tailwindcss",
+		name: "Tailwind CSS",
+		description: "实用优先的CSS框架，快速构建现代化用户界面。",
+		icon: "logos:tailwindcss-icon",
+		category: "frontend",
+		level: "advanced",
+		experience: { years: 2, months: 0 },
+		projects: ["mizuki-blog", "portfolio-website"],
+		color: "#06B6D4",
+	},
+	{
+		id: "sass",
+		name: "Sass/SCSS",
+		description: "CSS预处理器，提供变量、嵌套、混合等高级功能。",
+		icon: "logos:sass",
+		category: "frontend",
+		level: "intermediate",
+		experience: { years: 2, months: 3 },
+		projects: ["legacy-website", "component-library"],
+		color: "#CF649A",
+	},
+	{
+		id: "webpack",
+		name: "Webpack",
+		description: "现代JavaScript应用的静态模块打包器。",
+		icon: "logos:webpack",
+		category: "frontend",
+		level: "intermediate",
+		experience: { years: 1, months: 10 },
+		projects: ["custom-build-tool", "spa-application"],
+		color: "#8DD6F9",
+	},
+	{
+		id: "vite",
+		name: "Vite",
+		description: "下一代前端构建工具，快速的冷启动和热更新。",
+		icon: "logos:vitejs",
+		category: "frontend",
+		level: "intermediate",
+		experience: { years: 1, months: 2 },
+		projects: ["vue-project", "react-project"],
+		color: "#646CFF",
 	},
 	// {
 	// 	id: "tailwindcss",
@@ -93,8 +203,8 @@ export const skillsData: Skill[] = [
 		description: "基于Chrome V8引擎的JavaScript运行时，用于服务端开发。",
 		icon: "logos:nodejs-icon",
 		category: "backend",
-		level: "beginner",
-		experience: { years: 0, months: 3 },
+		level: "intermediate",
+		experience: { years: 2, months: 3 },
 		projects: ["data-visualization-tool", "e-commerce-platform"],
 		color: "#339933",
 	},
@@ -104,9 +214,153 @@ export const skillsData: Skill[] = [
 		description: "通用编程语言，适用于Web开发、数据分析、机器学习等。",
 		icon: "logos:python",
 		category: "backend",
-		level: "beginner",
-		experience: { years: 0, months: 3 },
+		level: "intermediate",
+		experience: { years: 1, months: 10 },
 		color: "#3776AB",
+	},
+	{
+		id: "java",
+		name: "Java",
+		description: "企业级应用开发的主流编程语言，跨平台、面向对象。",
+		icon: "logos:java",
+		category: "backend",
+		level: "intermediate",
+		experience: { years: 2, months: 0 },
+		projects: ["enterprise-system", "microservices-api"],
+		color: "#ED8B00",
+	},
+	{
+		id: "csharp",
+		name: "C#",
+		description: "Microsoft开发的现代面向对象编程语言，适用于.NET生态系统。",
+		icon: "devicon:csharp",
+		category: "backend",
+		level: "intermediate",
+		experience: { years: 1, months: 6 },
+		projects: ["desktop-application", "web-api"],
+		color: "#239120",
+	},
+	{
+		id: "go",
+		name: "Go",
+		description: "Google开发的高效编程语言，适用于云原生和微服务开发。",
+		icon: "logos:go",
+		category: "backend",
+		level: "beginner",
+		experience: { years: 0, months: 8 },
+		projects: ["microservice-demo"],
+		color: "#00ADD8",
+	},
+	{
+		id: "rust",
+		name: "Rust",
+		description: "系统级编程语言，注重安全性、速度和并发性，无垃圾回收器。",
+		icon: "logos:rust",
+		category: "backend",
+		level: "beginner",
+		experience: { years: 0, months: 6 },
+		projects: ["system-tool", "performance-critical-app"],
+		color: "#CE422B",
+	},
+	{
+		id: "cpp",
+		name: "C++",
+		description: "高性能系统编程语言，广泛用于游戏开发、系统软件和嵌入式开发。",
+		icon: "logos:c-plusplus",
+		category: "backend",
+		level: "intermediate",
+		experience: { years: 1, months: 4 },
+		projects: ["game-engine", "system-optimization"],
+		color: "#00599C",
+	},
+	{
+		id: "c",
+		name: "C",
+		description: "底层系统编程语言，操作系统和嵌入式系统开发的基础。",
+		icon: "logos:c",
+		category: "backend",
+		level: "intermediate",
+		experience: { years: 1, months: 2 },
+		projects: ["embedded-system", "kernel-module"],
+		color: "#A8B9CC",
+	},
+	{
+		id: "kotlin",
+		name: "Kotlin",
+		description:
+			"JetBrains开发的现代编程语言，与Java完全兼容，Android开发首选。",
+		icon: "logos:kotlin-icon",
+		category: "backend",
+		level: "beginner",
+		experience: { years: 0, months: 8 },
+		projects: ["android-app", "kotlin-backend"],
+		color: "#7F52FF",
+	},
+	{
+		id: "swift",
+		name: "Swift",
+		description: "Apple开发的现代编程语言，用于iOS、macOS、watchOS和tvOS开发。",
+		icon: "logos:swift",
+		category: "backend",
+		level: "beginner",
+		experience: { years: 0, months: 6 },
+		projects: ["ios-app", "macos-tool"],
+		color: "#FA7343",
+	},
+	{
+		id: "ruby",
+		name: "Ruby",
+		description: "动态、开源的编程语言，注重简洁性和生产力，Rails框架的基础。",
+		icon: "logos:ruby",
+		category: "backend",
+		level: "beginner",
+		experience: { years: 0, months: 4 },
+		projects: ["web-prototype"],
+		color: "#CC342D",
+	},
+	{
+		id: "php",
+		name: "PHP",
+		description: "广泛使用的服务器端脚本语言，特别适合Web开发。",
+		icon: "logos:php",
+		category: "backend",
+		level: "intermediate",
+		experience: { years: 1, months: 6 },
+		projects: ["cms-system", "e-commerce-backend"],
+		color: "#777BB4",
+	},
+	{
+		id: "express",
+		name: "Express.js",
+		description: "快速、极简的Node.js Web应用框架。",
+		icon: "simple-icons:express",
+		category: "backend",
+		level: "intermediate",
+		experience: { years: 1, months: 8 },
+		projects: ["data-visualization-tool"],
+		color: "#000000",
+	},
+	{
+		id: "spring",
+		name: "Spring Boot",
+		description: "Java生态系统中最流行的企业级应用开发框架。",
+		icon: "logos:spring-icon",
+		category: "backend",
+		level: "intermediate",
+		experience: { years: 1, months: 4 },
+		projects: ["enterprise-system", "rest-api"],
+		color: "#6DB33F",
+	},
+	{
+		id: "django",
+		name: "Django",
+		description: "Python的高级Web框架，快速开发、简洁实用的设计。",
+		icon: "logos:django-icon",
+		category: "backend",
+		level: "beginner",
+		experience: { years: 0, months: 6 },
+		projects: ["blog-backend"],
+		color: "#092E20",
 	},
 	// {
 	// 	id: "express",
@@ -122,6 +376,17 @@ export const skillsData: Skill[] = [
 
 	// Database Skills
 	{
+		id: "mysql",
+		name: "MySQL",
+		description: "世界上最流行的开源关系型数据库管理系统，广泛用于Web应用。",
+		icon: "logos:mysql-icon",
+		category: "database",
+		level: "advanced",
+		experience: { years: 2, months: 6 },
+		projects: ["e-commerce-platform", "blog-system"],
+		color: "#4479A1",
+	},
+	{
 		id: "postgresql",
 		name: "PostgreSQL",
 		description: "强大的开源关系型数据库管理系统。",
@@ -131,6 +396,17 @@ export const skillsData: Skill[] = [
 		experience: { years: 0, months: 5 },
 		projects: ["e-commerce-platform"],
 		color: "#336791",
+	},
+	{
+		id: "redis",
+		name: "Redis",
+		description: "高性能的内存数据结构存储，用作数据库、缓存和消息代理。",
+		icon: "logos:redis",
+		category: "database",
+		level: "intermediate",
+		experience: { years: 1, months: 3 },
+		projects: ["e-commerce-platform", "real-time-chat"],
+		color: "#DC382D",
 	},
 	{
 		id: "mongodb",
@@ -201,17 +477,17 @@ export const skillsData: Skill[] = [
 export const getSkillStats = () => {
 	const total = skillsData.length;
 	const byLevel = {
-		beginner: skillsData.filter(s => s.level === 'beginner').length,
-		intermediate: skillsData.filter(s => s.level === 'intermediate').length,
-		advanced: skillsData.filter(s => s.level === 'advanced').length,
-		expert: skillsData.filter(s => s.level === 'expert').length
+		beginner: skillsData.filter((s) => s.level === "beginner").length,
+		intermediate: skillsData.filter((s) => s.level === "intermediate").length,
+		advanced: skillsData.filter((s) => s.level === "advanced").length,
+		expert: skillsData.filter((s) => s.level === "expert").length,
 	};
 	const byCategory = {
-		frontend: skillsData.filter(s => s.category === 'frontend').length,
-		backend: skillsData.filter(s => s.category === 'backend').length,
-		database: skillsData.filter(s => s.category === 'database').length,
-		tools: skillsData.filter(s => s.category === 'tools').length,
-		other: skillsData.filter(s => s.category === 'other').length
+		frontend: skillsData.filter((s) => s.category === "frontend").length,
+		backend: skillsData.filter((s) => s.category === "backend").length,
+		database: skillsData.filter((s) => s.category === "database").length,
+		tools: skillsData.filter((s) => s.category === "tools").length,
+		other: skillsData.filter((s) => s.category === "other").length,
 	};
 
 	return { total, byLevel, byCategory };
@@ -219,24 +495,26 @@ export const getSkillStats = () => {
 
 // 按分类获取技能
 export const getSkillsByCategory = (category?: string) => {
-	if (!category || category === 'all') {
+	if (!category || category === "all") {
 		return skillsData;
 	}
-	return skillsData.filter(s => s.category === category);
+	return skillsData.filter((s) => s.category === category);
 };
 
 // 获取高级技能
 export const getAdvancedSkills = () => {
-	return skillsData.filter(s => s.level === 'advanced' || s.level === 'expert');
+	return skillsData.filter(
+		(s) => s.level === "advanced" || s.level === "expert",
+	);
 };
 
 // 计算总经验年数
 export const getTotalExperience = () => {
 	const totalMonths = skillsData.reduce((total, skill) => {
-		return total + (skill.experience.years * 12) + skill.experience.months;
+		return total + skill.experience.years * 12 + skill.experience.months;
 	}, 0);
 	return {
 		years: Math.floor(totalMonths / 12),
-		months: totalMonths % 12
+		months: totalMonths % 12,
 	};
 };

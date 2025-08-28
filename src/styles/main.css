@@ -1,3 +1,8 @@
+/* 导入相册样式 */
+@import './albums.css';
+/* 导入追番页面样式 */
+@import './anime.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,6 +44,33 @@ html {
         transition: none;
         /* 强制立即继承页面背景色 */
         fill: currentColor;
+    }
+    
+    /* 导航栏主题切换保护 - 完全禁用过渡以确保性能 */
+    .is-theme-transitioning #navbar > div,
+    .is-theme-transitioning #navbar[data-transparent-mode] > div,
+    .is-theme-transitioning #navbar[data-transparent-mode].scrolled > div,
+    .is-theme-transitioning body.wallpaper-transparent #navbar > div,
+    .is-theme-transitioning body.wallpaper-transparent #navbar[data-transparent-mode] > div,
+    .is-theme-transitioning body.wallpaper-transparent #navbar[data-transparent-mode].scrolled > div,
+    .is-theme-transitioning #banner-wrapper ~ * #navbar > div,
+    .is-theme-transitioning #banner-wrapper ~ * #navbar[data-transparent-mode] > div,
+    .is-theme-transitioning body:has(#banner-wrapper) #navbar > div,
+    .is-theme-transitioning body:has(#banner-wrapper) #navbar[data-transparent-mode] > div {
+        transition: none !important;
+        backdrop-filter: none !important;
+    }
+    
+    /* 导航栏相关浮动面板的过渡禁用 */
+    .is-theme-transitioning .dropdown-content,
+    .is-theme-transitioning .float-panel,
+    .is-theme-transitioning #display-setting,
+    .is-theme-transitioning #nav-menu-panel,
+    .is-theme-transitioning #translate-panel,
+    .is-theme-transitioning #mobile-toc-panel,
+    .is-theme-transitioning #search-panel {
+        transition: none !important;
+        backdrop-filter: none !important;
     }
     
     /* 波浪容器的颜色传递 */
@@ -294,4 +326,23 @@ html {
 
 .collapsed {
     height: var(--collapsedHeight);
+}
+
+/*剧透效果*/
+.custom-md spoiler {
+  --_spoiler-mask: var(--primary);
+  @apply hover:bg-transparent px-1 py-0.5 overflow-hidden rounded-md transition-all duration-150;
+  background-color: var(--_spoiler-mask);
+
+  &:not(:hover) {
+    color: var(--_spoiler-mask);
+    * {
+        color: var(--_spoiler-mask);
+    }
+  }
+}
+
+/* 浅色模式：使用更浅的主题色且完全不透明 */
+:root:not(.dark) .custom-md spoiler {
+  --_spoiler-mask: color-mix(in oklch, var(--primary) 55%, white 45%);
 }
