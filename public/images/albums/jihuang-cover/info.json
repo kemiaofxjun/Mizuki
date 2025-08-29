@@ -1,0 +1,74 @@
+{
+	"mode": "external",
+	"hidden": false,
+	"title": "饥荒加载图",
+	"description": "记录部分饥荒的加载图",
+	"date": "2025-08-28",
+	"location": "饥荒",
+	"tags": ["外链", "饥荒", "加载"],
+	"layout": "masonry",
+	"columns": 3,
+	"cover": "https://img.314926.xyz/images/2025/07/30/jihuangcover.webp",
+	"photos": [
+		{
+			"id": "external-1",
+			"src": "https://img.314926.xyz/images/2025/08/08/cover16.webp",
+			"alt": "1",
+			"title": "加载图1",
+			"description": "饥荒加载图1",
+			"tags": ["饥荒", "加载"],
+			"width": 800,
+			"height": 600
+		},
+		{
+			"id": "external-2",
+			"src": "https://img.314926.xyz/images/2025/08/15/cover18.webp",
+			"alt": "2",
+			"title": "加载图2",
+			"description": "饥荒加载图2",
+			"tags": ["饥荒", "加载"],
+			"width": 800,
+			"height": 600
+		},
+		{
+			"id": "external-3",
+			"src": "https://img.314926.xyz/images/2025/08/15/cover19.webp",
+			"alt": "3",
+			"title": "加载图3",
+			"description": "饥荒加载图3",
+			"tags": ["饥荒", "加载"],
+			"width": 800,
+			"height": 600
+		},
+		{
+			"id": "external-4",
+			"src": "https://img.314926.xyz/images/2025/08/15/cover20.webp",
+			"alt": "4",
+			"title": "加载图4",
+			"description": "饥荒加载图4",
+			"tags": ["饥荒", "加载"],
+			"width": 800,
+			"height": 600
+		},
+		{
+			"id": "external-5",
+			"src": "https://img.314926.xyz/images/2025/08/15/cover21.webp",
+			"alt": "5",
+			"title": "加载图5",
+			"description": "饥荒加载图5",
+			"tags": ["饥荒", "加载"],
+			"width": 800,
+			"height": 600
+		},
+		{
+			"id": "external-6",
+			"src": "https://img.314926.xyz/images/2025/08/15/cover22.webp",
+			"alt": "6",
+			"title": "加载图6",
+			"description": "饥荒加载图6",
+			"tags": ["饥荒", "加载"],
+			"width": 800,
+			"height": 600
+		}
+	]
+}
