@@ -26,6 +26,11 @@ export const siteConfig: SiteConfig = {
 
 	lang: SITE_LANG,
 
+	linkWarning: {
+		enable: true, // 启用链接警告
+		allowedHosts: ["https://mizuki.mysqil.com/", "example.com"], // 填入允许的域名列表，当前站点域名和链接域名不同时默认跳转至第一个域名
+	},
+
 	themeColor: {
 		hue: 210, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
 		fixed: false, // 对访问者隐藏主题色选择器
@@ -115,6 +120,7 @@ export const siteConfig: SiteConfig = {
 		// }
 	],
 };
+
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: true, // 启用全屏壁纸功能,非Banner模式下生效
 	src: {
