@@ -167,7 +167,7 @@ const stats = {
 				<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
 					{animeList.map(anime => {
 						const statusInfo = getStatusInfo(anime.status);
-						const progressPercent = (anime.progress / anime.totalEpisodes) * 100;
+						const progressPercent = ((anime.progress ?? 0) / (anime.totalEpisodes ?? 1)) * 100;
 						
 						return (
 							<div class="group relative bg-[var(--card-bg)] border border-[var(--line-divider)] rounded-[var(--radius-large)] overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
@@ -233,7 +233,7 @@ const stats = {
 											<span class="text-black/70 dark:text-white/70 truncate ml-2">{anime.studio}</span>
 										</div>
 										<div class="flex flex-wrap gap-1 mt-2">
-											{anime.genre.map(g => (
+											{anime.genre && Array.isArray(anime.genre) && anime.genre.length > 0 && anime.genre.map(g => (
 												<span class="px-1.5 py-0.5 bg-[var(--btn-regular-bg)] text-black/70 dark:text-white/70 rounded text-xs">{g}</span>
 											))}
 										</div>
