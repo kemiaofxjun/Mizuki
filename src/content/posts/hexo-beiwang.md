@@ -138,7 +138,7 @@ pnpm install
 
 首先就是基本的安装，这里还是选择`git clone`没有别的原因，主要还是会改点源码，不想改的直接pnpm下载即可：
 
-```git
+```txt
 // git安装
 git clone -b dev https://github.com/everfu/hexo-theme-solitude.git themes/solitude
 
