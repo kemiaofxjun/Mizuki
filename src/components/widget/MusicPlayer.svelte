@@ -27,7 +27,7 @@ let isPlaying = false;
 // 播放器是否展开，默认为 false
 let isExpanded = false;
 // 播放器是否隐藏，默认为 false
-let isHidden = false;
+let isHidden = true;
 // 是否显示播放列表，默认为 false
 let showPlaylist = false;
 // 当前播放时间，默认为 0
@@ -65,30 +65,30 @@ let progressBar: HTMLElement;
 let volumeBar: HTMLElement;
 
 const localPlaylist = [
-	{
-		id: 1,
-		title: "ひとり上手",
-		artist: "Kaya",
-		cover: "assets/music/cover/hitori.jpg",
-		url: "assets/music/url/hitori.mp3",
-		duration: 240,
-	},
-	{
-		id: 2,
-		title: "眩耀夜行",
-		artist: "スリーズブーケ",
-		cover: "assets/music/cover/xryx.jpg",
-		url: "assets/music/url/xryx.mp3",
-		duration: 180,
-	},
-	{
-		id: 3,
-		title: "春雷の頃",
-		artist: "22/7",
-		cover: "assets/music/cover/cl.jpg",
-		url: "assets/music/url/cl.mp3",
-		duration: 200,
-	},
+	// {
+	// 	id: 1,
+	// 	title: "ひとり上手",
+	// 	artist: "Kaya",
+	// 	cover: "assets/music/cover/hitori.jpg",
+	// 	url: "assets/music/url/hitori.mp3",
+	// 	duration: 240,
+	// },
+	// {
+	// 	id: 2,
+	// 	title: "眩耀夜行",
+	// 	artist: "スリーズブーケ",
+	// 	cover: "assets/music/cover/xryx.jpg",
+	// 	url: "assets/music/url/xryx.mp3",
+	// 	duration: 180,
+	// },
+	// {
+	// 	id: 3,
+	// 	title: "春雷の頃",
+	// 	artist: "22/7",
+	// 	cover: "assets/music/cover/cl.jpg",
+	// 	url: "assets/music/url/cl.mp3",
+	// 	duration: 200,
+	// },
 ];
 
 async function fetchMetingPlaylist() {
