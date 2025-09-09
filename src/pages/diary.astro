@@ -5,11 +5,6 @@ import MainGridLayout from "../layouts/MainGridLayout.astro";
 
 // 示例即刻短文数据
 const moments = [
-		{
-		id: 2,
-		content: "测试日记",
-		date: "2025-08-21T11:41:00Z",// 当前时间的8小时前
-	},
 	{
 		id: 1,
 		content: "樱花下落速度的每秒五厘米!",
@@ -95,15 +90,7 @@ function formatTime(dateString: string): string {
 									
 								</div>
 							</div>
-							<div class="moment-actions">
-								<button class="action-btn reply-btn p-1.5 md:p-2 rounded-md hover:bg-[var(--btn-regular-bg)] transition-colors" title={i18n(I18nKey.diaryReply)}>
-									<i class="reply-icon text-xs md:text-sm">💬</i>
-								</button>
-							</div>
-						</div>
-					</div>
-				</>
-			))}
+						))}
 					</div>
 				</div>
 

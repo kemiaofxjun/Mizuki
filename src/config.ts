@@ -1,3 +1,5 @@
+
+import { factory } from "typescript";
 import type {
 	AnnouncementConfig,
 	CommentConfig,
@@ -25,11 +27,6 @@ export const siteConfig: SiteConfig = {
 	subtitle: "克喵的博客",
 
 	lang: SITE_LANG,
-
-	linkWarning: {
-		enable: true, // 启用链接警告
-		allowedHosts: ["https://blog.kemiaosw.top/", "example.com"], // 填入允许的域名列表，当前站点域名和链接域名不同时默认跳转至第一个域名
-	},
 
 	themeColor: {
 		hue: 210, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
@@ -419,7 +416,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 		//hidden:不显示侧边栏(桌面端)   drawer:抽屉模式(移动端不显示)   sidebar:显示侧边栏
 		layout: {
 			// 移动端：抽屉模式
-			mobile: "drawer",
+			mobile: "sidebar",
 			// 平板端：显示侧边栏
 			tablet: "sidebar",
 			// 桌面端：显示侧边栏

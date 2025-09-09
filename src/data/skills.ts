@@ -19,39 +19,6 @@ export interface Skill {
 
 export const skillsData: Skill[] = [
 	// Frontend Skills
-	// {
-	// 	id: 'javascript',
-	// 	name: 'JavaScript',
-	// 	description: '现代JavaScript开发，包括ES6+语法、异步编程、模块化开发等。',
-	// 	icon: 'logos:javascript',
-	// 	category: 'frontend',
-	// 	level: 'advanced',
-	// 	experience: { years: 3, months: 6 },
-	// 	projects: ['mizuki-blog', 'portfolio-website', 'data-visualization-tool'],
-	// 	color: '#F7DF1E'
-	// },
-	// {
-	// 	id: 'typescript',
-	// 	name: 'TypeScript',
-	// 	description: '类型安全的JavaScript超集，提升代码质量和开发效率。',
-	// 	icon: 'logos:typescript-icon',
-	// 	category: 'frontend',
-	// 	level: 'advanced',
-	// 	experience: { years: 2, months: 8 },
-	// 	projects: ['mizuki-blog', 'portfolio-website', 'task-manager-app'],
-	// 	color: '#3178C6'
-	// },
-	// {
-	// 	id: 'react',
-	// 	name: 'React',
-	// 	description: '构建用户界面的JavaScript库，包括Hooks、Context、状态管理等。',
-	// 	icon: 'logos:react',
-	// 	category: 'frontend',
-	// 	level: 'advanced',
-	// 	experience: { years: 2, months: 10 },
-	// 	projects: ['portfolio-website', 'task-manager-app'],
-	// 	color: '#61DAFB'
-	// },
 	{
 		id: "javascript",
 		name: "JavaScript",
@@ -184,17 +151,6 @@ export const skillsData: Skill[] = [
 		projects: ["vue-project", "react-project"],
 		color: "#646CFF",
 	},
-	// {
-	// 	id: "tailwindcss",
-	// 	name: "Tailwind CSS",
-	// 	description: "实用优先的CSS框架，快速构建现代化用户界面。",
-	// 	icon: "logos:tailwindcss-icon",
-	// 	category: "frontend",
-	// 	level: "beginner",
-	// 	experience: { years: 2, months: 0 },
-	// 	projects: ["mizuki-blog", "portfolio-website"],
-	// 	color: "#06B6D4",
-	// },
 
 	// Backend Skills
 	{
@@ -362,17 +318,6 @@ export const skillsData: Skill[] = [
 		projects: ["blog-backend"],
 		color: "#092E20",
 	},
-	// {
-	// 	id: "express",
-	// 	name: "Express.js",
-	// 	description: "快速、极简的Node.js Web应用框架。",
-	// 	icon: "simple-icons:express",
-	// 	category: "backend",
-	// 	level: "intermediate",
-	// 	experience: { years: 1, months: 8 },
-	// 	projects: ["data-visualization-tool"],
-	// 	color: "#000000",
-	// },
 
 	// Database Skills
 	{
@@ -418,17 +363,6 @@ export const skillsData: Skill[] = [
 		experience: { years: 0, months: 9 },
 		color: "#47A248",
 	},
-	// {
-	// 	id: "firebase",
-	// 	name: "Firebase",
-	// 	description: "Google的移动和Web应用开发平台，提供实时数据库和认证服务。",
-	// 	icon: "simple-icons:firebase",
-	// 	category: "database",
-	// 	level: "intermediate",
-	// 	experience: { years: 0, months: 10 },
-	// 	projects: ["task-manager-app"],
-	// 	color: "#FFCA28",
-	// },
 
 	// Tools
 	{
@@ -461,16 +395,6 @@ export const skillsData: Skill[] = [
 		experience: { years: 0, months: 3 },
 		color: "#2496ED",
 	},
-	// {
-	// 	id: "figma",
-	// 	name: "Figma",
-	// 	description: "协作式界面设计工具，用于UI/UX设计和原型制作。",
-	// 	icon: "logos:figma",
-	// 	category: "tools",
-	// 	level: "intermediate",
-	// 	experience: { years: 1, months: 6 },
-	// 	color: "#F24E1E",
-	// },
 ];
 
 // 获取技能统计信息

@@ -6,9 +6,9 @@ export interface Project {
 	title: string;
 	description: string;
 	image: string;
-	category: "web" | "mobile" | "desktop" | "other";
+	category: 'web' | 'mobile' | 'desktop' | 'other';
 	techStack: string[];
-	status: "completed" | "in-progress" | "planned";
+	status: 'completed' | 'in-progress' | 'planned';
 	liveDemo?: string;
 	sourceCode?: string;
 	startDate: string;
@@ -111,51 +111,14 @@ export const projectsData: Project[] = [
 		featured: false,
 		tags: ["Blog", "Hexo"],
 	},
-	// {
-	// 	id: "task-manager-app",
-	// 	title: "Task Manager App",
-	// 	description: "跨平台任务管理应用，支持团队协作和项目管理。",
-	// 	image: "",
-	// 	category: "mobile",
-	// 	techStack: ["React Native", "TypeScript", "Redux", "Firebase"],
-	// 	status: "in-progress",
-	// 	startDate: "2024-03-01",
-	// 	tags: ["Mobile", "Productivity", "Team Collaboration"],
-	// },
-	// {
-	// 	id: "data-visualization-tool",
-	// 	title: "Data Visualization Tool",
-	// 	description: "数据可视化工具，支持多种图表类型和交互式分析。",
-	// 	image: "",
-	// 	category: "web",
-	// 	techStack: ["Vue.js", "D3.js", "TypeScript", "Node.js"],
-	// 	status: "completed",
-	// 	liveDemo: "https://dataviz.example.com",
-	// 	startDate: "2023-06-01",
-	// 	endDate: "2023-11-01",
-	// 	tags: ["Data Visualization", "Analytics", "Charts"],
-	// },
-	// {
-	// 	id: "e-commerce-platform",
-	// 	title: "E-commerce Platform",
-	// 	description: "全栈电商平台，包含用户管理、商品管理、订单处理等功能。",
-	// 	image: "",
-	// 	category: "web",
-	// 	techStack: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
-	// 	status: "planned",
-	// 	startDate: "2024-07-01",
-	// 	tags: ["E-commerce", "Full Stack", "Payment Integration"],
-	// },
 ];
 
 // 获取项目统计信息
 export const getProjectStats = () => {
 	const total = projectsData.length;
-	const completed = projectsData.filter((p) => p.status === "completed").length;
-	const inProgress = projectsData.filter(
-		(p) => p.status === "in-progress",
-	).length;
-	const planned = projectsData.filter((p) => p.status === "planned").length;
+	const completed = projectsData.filter(p => p.status === 'completed').length;
+	const inProgress = projectsData.filter(p => p.status === 'in-progress').length;
+	const planned = projectsData.filter(p => p.status === 'planned').length;
 
 	return {
 		total,
@@ -177,14 +140,14 @@ export const getProjectsByCategory = (category?: string) => {
 
 // 获取特色项目
 export const getFeaturedProjects = () => {
-	return projectsData.filter((p) => p.featured);
+	return projectsData.filter(p => p.featured);
 };
 
 // 获取所有技术栈
 export const getAllTechStack = () => {
 	const techSet = new Set<string>();
-	projectsData.forEach((project) => {
-		project.techStack.forEach((tech) => techSet.add(tech));
+	projectsData.forEach(project => {
+		project.techStack.forEach(tech => techSet.add(tech));
 	});
 	return Array.from(techSet).sort();
 };
