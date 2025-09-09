@@ -28,7 +28,7 @@ export const siteConfig: SiteConfig = {
 
 	linkWarning: {
 		enable: true, // 启用链接警告
-		allowedHosts: ["https://mizuki.mysqil.com/", "example.com"], // 填入允许的域名列表，当前站点域名和链接域名不同时默认跳转至第一个域名
+		allowedHosts: ["https://blog.kemiaosw.top/", "example.com"], // 填入允许的域名列表，当前站点域名和链接域名不同时默认跳转至第一个域名
 	},
 
 	themeColor: {
