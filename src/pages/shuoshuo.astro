@@ -30,25 +30,76 @@ import MainGridLayout from "../layouts/MainGridLayout.astro";
   </div>
 
   <!-- 外部资源 -->
-  <script src="https://cdn.cbd.int/kemiaofxjun-cdn@1.0.3/js/qexo-talk/talk.js" defer></script>
   <link rel="stylesheet" href="https://cdn.cbd.int/kemiaofxjun-cdn@1.0.3/css/qexo-talk/talk.css" />
 
-  <!-- 初始化脚本 -->
-  <script>
-    window.addEventListener("load", function () {
+  <!-- 修复后的初始化脚本 -->
+<script>
+  // 修复核心：处理Astro页面导航的初始化问题
+  function loadTalkScript() {
+    // 如果脚本已加载，直接初始化
+    if (window.myQexoShouts) {
+      initQexo();
+      return;
+    }
+    
+    // 创建脚本标签
+    const script = document.createElement('script');
+    script.src = "https://cdn.cbd.int/kemiaofxjun-cdn@1.0.3/js/qexo-talk/talk.js";
+    script.defer = true;
+    
+    // 成功加载后初始化
+    script.onload = () => {
       if (typeof myQexoShouts !== "undefined") {
-        myQexoShouts.init({
-          el: "#my-shouts-container",
-          avatar: "https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp",
-          name: "克喵爱吃卤面",
-          limit: 10,
-          baseURL: "https://qexo.kemeow.top",
-        }).catch(function (error) {
-          console.error("加载过程中出现问题:", error);
-        });
+        initQexo();
       } else {
-        console.error("myQexoShouts 未定义，可能是 talk.js 未成功加载");
+        console.error("talk.js 加载失败");
       }
+    };
+    
+    // 加载失败处理
+    script.onerror = () => {
+      console.error("无法加载说说脚本");
+    };
+    
+    document.head.appendChild(script);
+  }
+
+  // 初始化函数（增加DOM元素检查）
+  function initQexo() {
+    // 确保容器元素已经存在
+    const container = document.getElementById('my-shouts-container');
+    if (!container) {
+      // 稍后重试（针对导航场景）
+      setTimeout(initQexo, 50);
+      return;
+    }
+    
+    // 清空容器防止重复内容
+    container.innerHTML = '';
+    
+    // 初始化说说
+    myQexoShouts.init({
+      el: "#my-shouts-container",
+      avatar: "https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp",
+      name: "克喵爱吃卤面",
+      limit: 10,
+      baseURL: "https://qexo.kemeow.top",
+    }).catch(err => {
+      console.error("初始化失败:", err);
     });
-  </script>
+  }
+
+  // 首次加载和Astro导航事件处理
+  if (document.readyState === 'complete') {
+    loadTalkScript();
+  } else {
+    window.addEventListener('load', loadTalkScript);
+  }
+  
+  // 监听Astro页面导航事件
+  document.addEventListener('astro:page-load', () => {
+    // 增加延时确保DOM完全更新
+    setTimeout(loadTalkScript, 100);
+  });
+</script>
 </MainGridLayout>
