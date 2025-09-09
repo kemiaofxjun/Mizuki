@@ -1,0 +1,107 @@
+---
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+---
+
+<MainGridLayout title="朋友圈 Lite" description="朋友们的最新动态">
+  <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+    <div class="card-base z-10 px-4 py-4 md:px-6 md:py-5 relative w-full">
+      <div class="relative max-w-4xl mx-auto">
+        <!-- 页面头部 -->
+        <div class="moments-header mb-6">
+          <div class="header-content">
+            <div class="header-info">
+              <h1 class="moments-title text-xl md:text-2xl lg:text-3xl font-bold text-90 mb-1">👥 朋友圈 Lite</h1>
+              <p class="moments-subtitle text-sm md:text-base lg:text-lg text-75">看看朋友们最近在干嘛</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 内容容器 -->
+        <div id="friend-circle-lite-root" class="timeline-list space-y-4 text-center text-75 text-sm italic">
+          正在加载朋友圈内容……
+        </div>
+
+        <!-- 底部提示 -->
+        <div class="moments-tips text-center mt-6 md:mt-8 lg:mt-10 text-75 text-xs md:text-sm lg:text-base italic">
+          Powered by Friend Circle Lite
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ 定义配置对象 -->
+  <script>
+    window.UserConfig = {
+      private_api_url: 'https://fc.kemeow.top/',
+      page_turning_number: 24,
+      error_img: 'https://pic.imgdb.cn/item/6695daa4d9c307b7e953ee3d.jpg',
+    };
+
+    // ✅ 手动加载脚本并初始化
+    const script = document.createElement('script');
+    script.src = 'https://fastly.jsdelivr.net/gh/willow-god/Friend-Circle-Lite/main/fclite.min.js';
+    script.onload = function () {
+      if (typeof initialize_fc_lite === 'function') {
+        initialize_fc_lite();
+      } else {
+        console.error('初始化函数未定义');
+      }
+    };
+    document.head.appendChild(script);
+  </script>
+
+<style>
+  /* 卡片基础样式统一 */
+  .fc-card {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--line-divider, #eee);
+    border-radius: var(--radius-large, 12px);
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .fc-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  /* 图片样式优化 */
+  .fc-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  /* 标题和内容统一字体 */
+  .fc-card .fc-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--c-text-1, #333);
+  }
+
+  .fc-card .fc-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--c-text-2, #666);
+  }
+
+  /* 链接样式 */
+  .fc-card a {
+    color: var(--primary, #3b82f6);
+    text-decoration: none;
+  }
+
+  .fc-card a:hover {
+    text-decoration: underline;
+  }
+
+  /* 卡片间距 */
+  #friend-circle-lite-root .fc-card {
+    margin-bottom: 1.5rem;
+  }
+</style>
+
+  <!-- ✅ 加载样式 -->
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/willow-god/Friend-Circle-Lite/main/fclite.min.css">
+</MainGridLayout>

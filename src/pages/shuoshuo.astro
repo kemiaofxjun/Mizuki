@@ -1,0 +1,54 @@
+---
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+---
+
+<MainGridLayout title="说说" description="碎碎念与即刻记录">
+  <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+    <div class="card-base z-10 px-4 py-4 md:px-6 md:py-5 relative w-full">
+      <div class="relative max-w-4xl mx-auto">
+        <!-- 页面头部 -->
+        <div class="moments-header mb-6">
+          <div class="header-content">
+            <div class="header-info">
+              <h1 class="moments-title text-xl md:text-2xl lg:text-3xl font-bold text-90 mb-1">📢 说说</h1>
+              <p class="moments-subtitle text-sm md:text-base lg:text-lg text-75">记录一些灵感与碎语</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 说说容器 -->
+        <div class="moments-timeline">
+          <div id="my-shouts-container" class="timeline-list space-y-4"></div>
+        </div>
+
+        <!-- 底部提示 -->
+        <div class="moments-tips text-center mt-6 md:mt-8 lg:mt-10 text-75 text-xs md:text-sm lg:text-base italic">
+          Powered by Qexo
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 外部资源 -->
+  <script src="https://cdn.cbd.int/kemiaofxjun-cdn@1.0.3/js/qexo-talk/talk.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.cbd.int/kemiaofxjun-cdn@1.0.3/css/qexo-talk/talk.css" />
+
+  <!-- 初始化脚本 -->
+  <script>
+    window.addEventListener("load", function () {
+      if (typeof myQexoShouts !== "undefined") {
+        myQexoShouts.init({
+          el: "#my-shouts-container",
+          avatar: "https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp",
+          name: "克喵爱吃卤面",
+          limit: 10,
+          baseURL: "https://qexo.kemeow.top",
+        }).catch(function (error) {
+          console.error("加载过程中出现问题:", error);
+        });
+      } else {
+        console.error("myQexoShouts 未定义，可能是 talk.js 未成功加载");
+      }
+    });
+  </script>
+</MainGridLayout>

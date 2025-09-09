@@ -165,28 +165,28 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
-			name: "链接",
+			name: "日常",
 			url: "/links/",
-			icon: "material-symbols:link",
+			icon: "mdi:book",
 			children: [
 				{
-					name: "GitHub",
-					url: "https://github.com/kemiaofxjun",
-					external: true,
-					icon: "fa6-brands:github",
+					name: "鱼塘",
+					url: "/fc/",
+					// external: true,
+					icon: "mdi:fish",
 				},
 				{
-					name: "Bilibili",
-					url: "https://space.bilibili.com/3546643173477234",
-					external: true,
-					icon: "fa6-brands:bilibili",
+					name: "微语",
+					url: "/shuoshuo/",
+					// external: true,
+					icon: "mdi:comment",
 				},
-				{
-					name: "Telegram",
-					url: "https://t.me/kemiaosw",
-					external: true,
-					icon: "mdi:git",
-				},
+				// {
+				// 	name: "Telegram",
+				// 	url: "https://t.me/kemiaosw",
+				// 	external: true,
+				// 	icon: "mdi:git",
+				// },
 			],
 		},
 		{

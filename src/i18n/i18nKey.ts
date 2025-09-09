@@ -154,6 +154,8 @@ enum I18nKey {
 	rssHowToUse = "rssHowToUse",
 	rssCopied = "rssCopied",
 	rssCopyFailed = "rssCopyFailed",
+	// 说说
+	shuoshuo = "说说",
 
 	// 时间线页面
 	timeline = "timeline",
