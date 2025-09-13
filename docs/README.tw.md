@@ -5,8 +5,20 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Mizuki 預覽](../README.webp)
-![Mizuki 預覽](../README2.webp)
+![Mizuki Preview](../README.png)
+
+<table>
+  <tr>
+    <td><img alt="" src="image/1.png"></td>
+    <td><img alt="" src="image/2.png"></td>
+    <td><img alt="" src="image/3.png"></td>
+  <tr>
+  <tr>
+    <td><img alt="" src="image/4.png"></td>
+    <td><img alt="" src="image/5.png"></td>
+    <td><img alt="" src="image/6.png"></td>
+  <tr>
+</table>
 
 一個現代化、功能豐富的靜態部落格模板，基於 [Astro](https://astro.build) 構建，具有先進的功能和精美的設計。
 
@@ -14,12 +26,12 @@
 [**📝 使用者文檔**](https://docs.mizuki.mysqil.com/)
 
 🌏 README 語言
-[**中文**](../README.md) /
-[**English**](../README.en.md) /
+[**English**](../README.md) /
+[**中文**](../README.zh.md) /
 [**日本語**](./README.ja.md) /
-[**中文繁體**](./README.tw.md) /
+[**中文繁体**](./README.tw.md) /
 
-## 🆕 v4.8 版本更新
+## 🆕 v4.9 版本更新
 - **Pio 看板娘整合**：整合了 Pio 看板娘，提供可愛的互動角色，增強使用者互動體驗。
 - **高度可配置**：支援在 `src/config.ts` 中進行詳細配置，包括模型路徑、位置、尺寸、對話內容等，滿足個性化需求。
 - **無刷新跳轉**：看板娘的返回首頁功能現在使用主題自帶的 Swup 無刷新跳轉，提供更流暢、無縫的頁面切換體驗。

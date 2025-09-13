@@ -1,5 +1,5 @@
-// 时间线数据配置文件
-// 用于管理时间线页面的数据
+// Timeline data configuration file
+// Used to manage data for the timeline page
 
 export interface TimelineItem {
 	id: string;
@@ -7,7 +7,7 @@ export interface TimelineItem {
 	description: string;
 	type: 'education' | 'work' | 'project' | 'achievement' | 'diary';
 	startDate: string;
-	endDate?: string; // 如果为空表示至今
+	endDate?: string; // If empty, it means current
 	location?: string;
 	organization?: string;
 	position?: string;
@@ -125,7 +125,7 @@ export const timelineData: TimelineItem[] = [
 	},
 ];
 
-// 获取时间线统计信息
+// Get timeline statistics
 export const getTimelineStats = () => {
 	const total = timelineData.length;
 	const byType = {
@@ -139,7 +139,7 @@ export const getTimelineStats = () => {
 	return { total, byType };
 };
 
-// 按类型获取时间线项目
+// Get timeline items by type
 export const getTimelineByType = (type?: string) => {
 	if (!type || type === "all") {
 		return timelineData.sort(
@@ -155,7 +155,7 @@ export const getTimelineByType = (type?: string) => {
 		);
 };
 
-// 获取特色时间线项目
+// Get featured timeline items
 export const getFeaturedTimeline = () => {
 	return timelineData
 		.filter((item) => item.featured)
@@ -165,12 +165,12 @@ export const getFeaturedTimeline = () => {
 		);
 };
 
-// 获取当前进行中的项目
+// Get current ongoing items
 export const getCurrentItems = () => {
 	return timelineData.filter((item) => !item.endDate);
 };
 
-// 计算总工作经验
+// Calculate total work experience
 export const getTotalWorkExperience = () => {
 	const workItems = timelineData.filter((item) => item.type === "work");
 	let totalMonths = 0;

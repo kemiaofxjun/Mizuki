@@ -1,5 +1,5 @@
-// 项目数据配置文件
-// 用于管理项目展示页面的数据
+// Project data configuration file
+// Used to manage data for the project display page
 
 export interface Project {
 	id: string;
@@ -113,7 +113,7 @@ export const projectsData: Project[] = [
 	},
 ];
 
-// 获取项目统计信息
+// Get project statistics
 export const getProjectStats = () => {
 	const total = projectsData.length;
 	const completed = projectsData.filter(p => p.status === 'completed').length;
@@ -130,7 +130,7 @@ export const getProjectStats = () => {
 	};
 };
 
-// 按分类获取项目
+// Get projects by category
 export const getProjectsByCategory = (category?: string) => {
 	if (!category || category === "all") {
 		return projectsData;
@@ -138,12 +138,12 @@ export const getProjectsByCategory = (category?: string) => {
 	return projectsData.filter((p) => p.category === category);
 };
 
-// 获取特色项目
+// Get featured projects
 export const getFeaturedProjects = () => {
 	return projectsData.filter(p => p.featured);
 };
 
-// 获取所有技术栈
+// Get all tech stacks
 export const getAllTechStack = () => {
 	const techSet = new Set<string>();
 	projectsData.forEach(project => {

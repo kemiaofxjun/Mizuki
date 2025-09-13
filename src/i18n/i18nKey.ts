@@ -194,6 +194,15 @@ enum I18nKey {
 	passwordUnlocking = "passwordUnlocking",
 	passwordIncorrect = "passwordIncorrect",
 	passwordDecryptError = "passwordDecryptError",
+	passwordRequired = "passwordRequired",
+	passwordVerifying = "passwordVerifying",
+	passwordDecryptFailed = "passwordDecryptFailed",
+	passwordDecryptRetry = "passwordDecryptRetry",
+	passwordUnlockButton = "passwordUnlockButton",
+	copyFailed = "copyFailed",
+	syntaxHighlightFailed = "syntaxHighlightFailed",
+	autoSyntaxHighlightFailed = "autoSyntaxHighlightFailed",
+	decryptionError = "decryptionError",
 }
 
 export default I18nKey;

@@ -20,7 +20,7 @@ import { getTranslateLanguageFromConfig } from "./utils/language-utils";
 // 移除i18n导入以避免循环依赖
 
 // 定义站点语言
-const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
+const SITE_LANG = "en"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 
 export const siteConfig: SiteConfig = {
 	title: "喵洛阁",
@@ -190,42 +190,42 @@ export const navBarConfig: NavBarConfig = {
 			],
 		},
 		{
-			name: "我的",
+			name: "My",
 			url: "/content/",
 			icon: "material-symbols:person",
 			children: [
 				LinkPreset.Anime,
 				LinkPreset.Diary,
 				{
-					name: "相册",
+					name: "Gallery",
 					url: "/albums/",
 					icon: "material-symbols:photo-library",
 				},
 			],
 		},
 		{
-			name: "关于",
+			name: "About",
 			url: "/content/",
 			icon: "material-symbols:info",
 			children: [LinkPreset.About, LinkPreset.Friends],
 		},
 		{
-			name: "其他",
+			name: "Others",
 			url: "#",
 			icon: "material-symbols:more-horiz",
 			children: [
 				{
-					name: "项目展示",
+					name: "Projects",
 					url: "/projects/",
 					icon: "material-symbols:work",
 				},
 				{
-					name: "技能展示",
+					name: "Skills",
 					url: "/skills/",
 					icon: "material-symbols:psychology",
 				},
 				{
-					name: "时间线",
+					name: "Timeline",
 					url: "/timeline/",
 					icon: "material-symbols:timeline",
 				},
@@ -294,7 +294,7 @@ export const announcementConfig: AnnouncementConfig = {
 	closable: true, // 允许用户关闭公告
 	link: {
 		enable: true, // 启用链接
-		text: "了解更多", // 链接文本
+		text: "Learn More", // 链接文本
 		url: "/about/", // 链接 URL
 		external: false, // 内部链接
 	},
@@ -457,16 +457,16 @@ export const pioConfig: import("./types/config").PioConfig = {
 	mode: "draggable", // 默认为可拖拽模式
 	hiddenOnMobile: true, // 默认在移动设备上隐藏
 	dialog: {
-		welcome: "欢迎来到 Mizuki 网站！", // 欢迎词
+		welcome: "Welcome to Mizuki Website!", // 欢迎词
 		touch: [
-			"你在干什么？",
-			"再摸我就报警了！",
+			"What are you doing?",
+			"Stop touching me!",
 			"HENTAI!",
-			"不可以这样欺负我啦！",
+			"Don't bully me like that!",
 		], // 触摸提示
-		home: "点击这里回到首页！", // 首页提示
-		skin: ["想看看我的新衣服吗？", "新衣服真漂亮~"], // 换装提示
-		close: "QWQ 下次再见吧~", // 关闭提示
+		home: "Click here to go back to homepage!", // 首页提示
+		skin: ["Want to see my new outfit?", "The new outfit looks great~"], // 换装提示
+		close: "QWQ See you next time~", // 关闭提示
 		link: "https://github.com/matsuzaka-yuki/Mizuki", // 关于链接
 	},
 };

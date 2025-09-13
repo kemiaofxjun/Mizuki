@@ -5,8 +5,20 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Mizuki プレビュー](../README.webp)
-![Mizuki プレビュー](../README2.webp)
+![Mizuki Preview](../README.png)
+
+<table>
+  <tr>
+    <td><img alt="" src="docs/image/1.png"></td>
+    <td><img alt="" src="docs/image/2.png"></td>
+    <td><img alt="" src="docs/image/3.png"></td>
+  <tr>
+  <tr>
+    <td><img alt="" src="docs/image/4.png"></td>
+    <td><img alt="" src="docs/image/5.png"></td>
+    <td><img alt="" src="docs/image/6.png"></td>
+  <tr>
+</table>
 
 [Astro](https://astro.build)をベースにした、先進的な機能と美しいデザインを備えた現代的な静的ブログテンプレートです。
 
@@ -14,12 +26,12 @@
 [**📝 ドキュメント**](https://docs.mizuki.mysqil.com/)
 
 🌏 README 言語
-[**中文**](../README.md) /
-[**English**](../README.en.md) /
+[**English**](../README.md) /
+[**中文**](../README.zh.md) /
 [**日本語**](./README.ja.md) /
 [**中文繁体**](./README.tw.md) /
 
-## 🆕 v4.8 アップデート
+## 🆕 v4.9 アップデート
 - **Pio Live2D統合**: Pio Live2Dキャラクターを統合し、可愛らしいインタラクティブな仲間を提供してユーザーエンゲージメントを向上させます。
 - **高度な設定**: モデルパス、位置、サイズ、会話内容など、`src/config.ts`で詳細な設定をサポートし、パーソナライズされたニーズに対応します。
 - **シームレスなナビゲーション**: 「ホームに戻る」機能は、テーマに組み込まれたSwupを使用して、スムーズでリフレッシュなしのページ遷移を提供します。
