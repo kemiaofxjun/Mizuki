@@ -245,7 +245,7 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
 	avatar:
-		"https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp", // Relative to /src directory. If starts with '/', relative to /public directory
+		"https://img.314926.xyz/images/2025/09/15/kemiaoaclumian.webp", // Relative to /src directory. If starts with '/', relative to /public directory
 	name: "克喵爱吃卤面",
 	bio: "我们不仅是守护者，还是一群时刻对抗着失控和疯狂的可怜虫~",
 	links: [
@@ -466,7 +466,7 @@ export const pioConfig: import("./types/config").PioConfig = {
 	mode: "draggable", // 默认为可拖拽模式
 	hiddenOnMobile: true, // 默认在移动设备上隐藏
 	dialog: {
-		welcome: "Welcome to Mizuki Website!", // 欢迎词
+		welcome: "Welcome to KeMiao's Website!", // 欢迎词
 		touch: [
 			"What are you doing?",
 			"Stop touching me!",
@@ -476,7 +476,7 @@ export const pioConfig: import("./types/config").PioConfig = {
 		home: "Click here to go back to homepage!", // 首页提示
 		skin: ["Want to see my new outfit?", "The new outfit looks great~"], // 换装提示
 		close: "QWQ See you next time~", // 关闭提示
-		link: "https://github.com/matsuzaka-yuki/Mizuki", // 关于链接
+		link: "https://github.com/kemiaofxjun", // 关于链接
 	},
 };
 
